@@ -25,7 +25,7 @@ The flower shop currently has two bouquets in stock with the following flowers:
 
 Formulate a database schema to best represent the given scenario and events.
 
-Create the tables in __create-tables.js__. You can have **multiple**
+Create the tables in __create-tables.sql__. You can have **multiple**
 SQL statements in this file.
 
 HINT: Make sure to handle these items:
