@@ -2,7 +2,7 @@
 -- length of each 'pink' or 'purple' flower. Order the flowers by their variety,
 -- then by their color, then by their stem length.
 
-SELECT * FROM flowers f
+SELECT name, color, stem_length FROM flowers f
 JOIN flower_types t ON f.flower_type_id = t.id
 WHERE color in ('pink', 'purple')
-ORDER BY t.name, color, stem_length;
+ORDER BY name, color, stem_length;
