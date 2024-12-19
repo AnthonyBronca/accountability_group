@@ -96,7 +96,10 @@ You should see:
 
 
 ### Step 4
-In the /tue/find-all-bouquets file, add a query to get all bouqets where they are ordered alphabetically
+In the `/tue/find-all-bouquets.sql` file, add a query to get all bouqets where they are ordered alphabetically
+
+### Step 5
+In the `/tue/find-all-bouqets.sql` file, add a query to get all flowers where they are ordered alphabetically
 
 
 ## WED HW
