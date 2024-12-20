@@ -2,13 +2,13 @@
 PRAGMA foreign_keys = 1;
 
 -- Your code here
-DROP TABLE IF EXISTS bouquets;
-DROP TABLE IF EXISTS flowers;
 DROP TABLE IF EXISTS flower_types;
+DROP TABLE IF EXISTS flowers;
+DROP TABLE IF EXISTS bouquets;
 
 CREATE TABLE bouquets(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR (50) NOT NULL UNIQUE,
     price NUMERIC(2,2) NOT NULL 
     
 );
@@ -19,10 +19,10 @@ CREATE TABLE flowers (
     stem_length VARCHAR(10) NOT NULL,
     flower_type_id INTEGER,
     bouquet_id INTEGER,
-    FOREIGN KEY (flower_type_id) REFERENCES flower_types (id),
-    FOREIGN KEY (bouquet_id) REFERENCES bouquets (id)
+    FOREIGN KEY (flower_type_id) REFERENCES flower_types (id) ON DELETE CASCADE,
+    FOREIGN KEY (bouquet_id) REFERENCES bouquets (id) ON DELETE CASCADE 
 );
-
+--VARIETY--
 CREATE TABLE flower_types (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     types VARCHAR(50) NOT NULL UNIQUE
